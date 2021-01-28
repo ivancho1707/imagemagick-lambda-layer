@@ -24,8 +24,6 @@ mkdir --parents build/cache/lib/pkgconfig
 
 log 'docker run' 'lambci/lambda-base-2:build'
 docker run \
-    --interactive \
-    --tty \
     --rm \
     --volume $(pwd):/var/task \
     --env "HOST_USER=$(whoami)" \

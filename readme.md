@@ -11,6 +11,7 @@ Generate a Lambda Layer with ImageMagick and some libraries
 | libpng | 1.6.37 |
 | libtiff | 4.1.0 |
 | libwebp | 1.1.0 |
+| libfreetype | 2.10.0 |
 
 ### Build
 
