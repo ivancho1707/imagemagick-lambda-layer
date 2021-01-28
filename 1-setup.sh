@@ -57,6 +57,8 @@ download libpng http://prdownloads.sourceforge.net/libpng/libpng-1.6.37.tar.xz
 download libtiff http://download.osgeo.org/libtiff/tiff-4.1.0.tar.gz
 # libwebp
 download libwebp https://github.com/webmproject/libwebp/archive/v1.1.0.tar.gz
+# libfreetype
+download libfreetype https://download.savannah.gnu.org/releases/freetype/freetype-2.10.0.tar.gz
 
 log 'docker pull' 'lambci/lambda-base-2:build'
 docker pull lambci/lambda-base-2:build

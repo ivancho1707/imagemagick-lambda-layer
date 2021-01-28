@@ -112,6 +112,20 @@ else
 fi
 
 
+# build `libfreetype` if not already done
+if [[ ! -f "$CACHE/lib/libfreetype.a" ]]; then
+    log 'build' 'libfreetype plugin'
+    cd /var/task/src/libfreetype
+
+    eval "$CONFIGURE"
+
+    make
+    make install
+else
+    log 'skip build' 'libfreetype plugin'
+fi
+
+
 # build `imagemagick` if not already done
 if [[ ! -f "/var/task/imagemagick.zip" ]]; then
     log 'build' 'imagemagick'
