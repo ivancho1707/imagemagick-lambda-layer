@@ -20,19 +20,18 @@ log() {
     echo -e "\033[1;32m$1: \033[1;33m$2\033[0m"
 }
 
-
 # build `libjpg` if not already done
-if [[ ! -f "$CACHE/lib/libjpeg.a" ]]; then
-    log 'build' 'libjpg plugin'
-    cd /var/task/src/libjpg
-
-    eval "$CONFIGURE"
-
-    make
-    make install
-else
-    log 'skip build' 'libjpg plugin'
-fi
+#if [[ ! -f "$CACHE/lib/libjpeg.a" ]]; then
+#    log 'build' 'libjpg plugin'
+#    cd /var/task/src/libjpg
+#
+#    eval "$CONFIGURE"
+#
+#    make
+#    make install
+#else
+#    log 'skip build' 'libjpg plugin'
+#fi
 
 
 # build `libpng` if not already done
@@ -46,6 +45,83 @@ if [[ ! -f "$CACHE/lib/libpng.a" ]]; then
     make install
 else
     log 'skip build' 'libpng plugin'
+fi
+
+
+# build `libtiff` if not already done
+#if [[ ! -f "$CACHE/lib/libtiff.a" ]]; then
+#    log 'build' 'libtiff plugin'
+#    cd /var/task/src/libtiff
+#
+#    eval "$CONFIGURE"
+#
+#    make
+#    make install
+#else
+#    log 'skip build' 'libtiff plugin'
+#fi
+
+
+# build `libbz2` if not already done
+#if [[ ! -f "$CACHE/lib/libbz2.a" ]]; then
+#    log 'build' 'libbz2 plugin'
+#    cd /var/task/src/libbz2
+#
+#    eval "$CONFIGURE"
+#
+#    make libbz2.a
+#    make install PREFIX=$CACHE
+#else
+#    log 'skip build' 'libbz2 plugin'
+#fi
+
+
+# build `libwebp` if not already done
+#if [[ ! -f "$CACHE/lib/libwebp.a" ]]; then
+#    log 'build' 'libwebp plugin'
+#    cd /var/task/src/libwebp
+#
+#    sh autogen.sh
+#    eval "$CONFIGURE"
+#
+#    make
+#    make install
+#else
+#    log 'skip build' 'libwebp plugin'
+#fi
+
+
+# build `libopenjp2` if not already done
+#if [[ ! -f "$CACHE/lib/libopenjp2.a" ]]; then
+#    log 'build' 'libopenjp2 plugin'
+#    cd /var/task/src/libopenjp2
+#
+#    mkdir -p build
+#    cd build
+#    PKG_CONFIG_PATH=$CACHE/lib/pkgconfig cmake .. \
+#        -DCMAKE_BUILD_TYPE=Release \
+#        -DCMAKE_INSTALL_PREFIX=$CACHE \
+#        -DBUILD_SHARED_LIBS:bool=off \
+#        -DBUILD_CODEC:bool=off
+#    make clean
+#    make install
+#
+#else
+#    log 'skip build' 'libopenjp2 plugin'
+#fi
+
+
+# build `libfreetype` if not already done
+if [[ ! -f "$CACHE/lib/libfreetype.a" ]]; then
+    log 'build' 'libfreetype plugin'
+    cd /var/task/src/libfreetype
+
+    eval "$CONFIGURE"
+
+    make
+    make install
+else
+    log 'skip build' 'libfreetype plugin'
 fi
 
 

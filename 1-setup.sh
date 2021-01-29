@@ -45,10 +45,20 @@ download() {
 
 # imagemagick
 download imagemagick https://github.com/ImageMagick/ImageMagick/archive/7.0.9-20.tar.gz
+# libbz2
+# download libbz2 http://prdownloads.sourceforge.net/bzip2/bzip2-1.0.6.tar.gz
 # libjpg
-download libjpg http://ijg.org/files/jpegsrc.v9d.tar.gz
+# download libjpg http://ijg.org/files/jpegsrc.v9d.tar.gz
+# libopenjp2
+# download libopenjp2 https://github.com/uclouvain/openjpeg/archive/v2.3.1.tar.gz
 # libpng
 download libpng http://prdownloads.sourceforge.net/libpng/libpng-1.6.37.tar.xz
+# libtiff
+# download libtiff http://download.osgeo.org/libtiff/tiff-4.1.0.tar.gz
+# libwebp
+# download libwebp https://github.com/webmproject/libwebp/archive/v1.1.0.tar.gz
+# libfreetype
+download libfreetype https://download.savannah.gnu.org/releases/freetype/freetype-2.10.0.tar.gz
 
 log 'docker pull' 'lambci/lambda-base-2:build'
 docker pull lambci/lambda-base-2:build

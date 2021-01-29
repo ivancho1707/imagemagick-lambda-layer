@@ -1,12 +1,17 @@
-# ImageMagick for AWS Lambda (minified version)
+# ImageMagick for AWS Lambda **with font support**
 
 Generate a Lambda Layer with ImageMagick and minimal libraries
 
 | Content | Version |
 | :-- | :-- |
 | ImageMagick | 7.0.9-20 |
-| libjpg | 9d |
+| ~~libbz2~~ | ~~1.0.6~~ |
+| ~~libjpg~~ | ~~9d~~ |
+| ~~libopenjp2~~ | ~~2.3.1~~ |
 | libpng | 1.6.37 |
+| ~~libtiff~~ | ~~4.1.0~~ |
+| ~~libwebp~~ | ~~1.1.0~~ |
+| libfreetype | 2.10.0 |
 
 ### Build
 
