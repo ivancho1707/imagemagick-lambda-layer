@@ -126,6 +126,20 @@ else
 fi
 
 
+# build `fontconfig` if not already done
+if [[ ! -f "$CACHE/lib/fontconfig.a" ]]; then
+    log 'build' 'fontconfig plugin'
+    cd /var/task/src/fontconfig
+
+    eval "$CONFIGURE --enable-libxml2"
+
+    make
+    make install
+else
+    log 'skip build' 'libfreetype plugin'
+fi
+
+
 # build `imagemagick` if not already done
 if [[ ! -f "/var/task/imagemagick.zip" ]]; then
     log 'build' 'imagemagick'

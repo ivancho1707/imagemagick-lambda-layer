@@ -59,6 +59,8 @@ download libtiff http://download.osgeo.org/libtiff/tiff-4.1.0.tar.gz
 download libwebp https://github.com/webmproject/libwebp/archive/v1.1.0.tar.gz
 # libfreetype
 download libfreetype https://download.savannah.gnu.org/releases/freetype/freetype-2.10.0.tar.gz
+#fontconfig
+download https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.13.0.tar.bz2
 
 log 'docker pull' 'lambci/lambda-base-2:build'
 docker pull lambci/lambda-base-2:build
